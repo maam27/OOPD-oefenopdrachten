@@ -4,6 +4,7 @@ class Slider{
   float x;
   float y;
   int nPosities;
+  int positie;
   
   public Slider(float breedte, float hoogte, float x, float y, int positions){
     this.breedte = breedte;
@@ -13,21 +14,18 @@ class Slider{
     this.nPosities = positions;
   }
     
-  int bepaalSliderPositie() {
+  void bepaalSliderPositie() {
     float blokjeBreedte = this.breedte / this.nPosities;
-    
     if (mouseX < this.x) {
-     return 0;
-    }
-    else if (mouseX >= this.breedte + this.x) {
-      return this.nPosities - 1;
-    }
-    else {
-      return floor((mouseX  - this.x) / blokjeBreedte);
+     this.positie = 0;
+    } else if (mouseX >= this.breedte + this.x) {
+      this.positie = this.nPosities - 1;
+    } else {
+      this.positie = floor((mouseX  - this.x) / blokjeBreedte);
     } 
   }
   
-  void tekenSlider(int positie) {   
+  void tekenSlider() {   
     float blokjeBreedte = this.breedte / this.nPosities;
     
     noStroke();
@@ -35,7 +33,7 @@ class Slider{
     rect(this.x, this.y, this.breedte, this.hoogte);
     
     fill(#2257F0);
-    rect(this.x + positie * blokjeBreedte, y, blokjeBreedte, hoogte);  
+    rect(this.x + this.positie * blokjeBreedte, this.y, blokjeBreedte, this.hoogte);  
   }
   
 

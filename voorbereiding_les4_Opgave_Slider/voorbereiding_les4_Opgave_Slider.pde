@@ -8,6 +8,6 @@ void setup() {
 
 
 void draw() {
-  int s1HuidigePositie = s1.bepaalSliderPositie();
-  s1.tekenSlider(s1HuidigePositie);  
+  s1.bepaalSliderPositie();
+  s1.tekenSlider();  
 }
