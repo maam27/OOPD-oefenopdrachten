@@ -21,6 +21,22 @@ class Dambord{
       new Damsteen(50,150,colour2,50),
       new Damsteen(150,150,colour2,50)};
   }
+
+ public Dambord(int x,int y, int breedte, int hoogte){   
+   this.x=x;
+    this.y=y;
+    this.breedte = breedte;
+    this.hoogte = hoogte;
+      
+    color colour1 = #FFFFFF;
+    color colour2 = #000000;
+    
+    this.stenen = new Damsteen[]{
+      new Damsteen(50,50,colour1,50),
+      new Damsteen(150,50,colour1,50),
+      new Damsteen(50,150,colour2,50),
+      new Damsteen(150,150,colour2,50)};
+  }
   
   void teken(){
     int vBreedte = this.breedte/8;
