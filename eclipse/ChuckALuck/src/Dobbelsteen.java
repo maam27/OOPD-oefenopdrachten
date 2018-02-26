@@ -1,17 +1,22 @@
 import java.util.Random;
 
 public class Dobbelsteen {
-	int lastRoll = -1;
-	
-	public Dobbelsteen() {
-		
-	}
-	
+	private int laatstGedobbeld;
+
 	public void dobbel() {
-		this.lastRoll = new Random().nextInt(6);
+		Random r = new Random();
+		laatstGedobbeld = r.nextInt(6);
 	}
-	
+
+	public String toString() {
+		return "Er is: " + laatstGedobbeld + " gedobbeld.";
+	}
+
 	public int getLaatstGedobbeld() {
-		return lastRoll;
+		return laatstGedobbeld;
+	}
+
+	public void setLaatstGedobbeld(int laatstGedobbeld) {
+		this.laatstGedobbeld = laatstGedobbeld;
 	}
 }
