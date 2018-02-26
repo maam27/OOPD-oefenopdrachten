@@ -14,6 +14,8 @@ public class main extends PApplet{
 	
 	public void setup() {
 		cal = new ChuckALuckSpel();
+		cal.bet(3, 5);
+		cal.db.toString();
 	}
 	
 	public void draw() {
