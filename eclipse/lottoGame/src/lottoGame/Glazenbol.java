@@ -17,9 +17,6 @@ public class Glazenbol {
 	}
 	
 	public Lottobal schepBal() {
-		int random = new Random().nextInt(ballen.size());
-		Lottobal bal = ballen.get(random);
-		ballen.remove(random);
-		return bal;
+		return ballen.remove(new Random().nextInt(ballen.size()));
 	}
 }

@@ -24,7 +24,7 @@ public class Scorebord {
 		this.bonusBal = bal;
 	}
 
-	public void sorteerBallen() {
+	public void sorteerBallen() {		
 		for (int i = ballen.size(); i > 0; i--) {
 			for (int j = 0; j < i-1; j++) { 
 	            if (ballen.get(j).getNummer() > ballen.get(j+1).getNummer()) {
