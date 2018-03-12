@@ -4,12 +4,15 @@ public class Radioknop extends Switch implements IDoelwit{
 
 	public Radioknop(PApplet app, float x, float y, float breedte, float hoogte) {
 		super(app, x, y, breedte, hoogte);
-
 	}
 
 	@Override
-	public void schakel() {
-		doeKnopActie();		
+	public void schakel() {	
+		for(IDoelwit dw: this.doelwitten) {
+			Radioknop rk = (Radioknop)dw;
+			rk.isAan = false;
+		}
+		this.isAan = true;
 	}
 	
 	@Override
