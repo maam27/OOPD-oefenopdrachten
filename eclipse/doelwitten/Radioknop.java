@@ -41,6 +41,12 @@ public class Radioknop extends Switch implements IDoelwit{
 
 	public void doeKnopActie() {		
 		this.isAan=true;;
+	}
+
+	@Override
+	public void teken() {
+		// TODO Auto-generated method stub
+		
 	}	
 
 }
