@@ -13,7 +13,9 @@ public class main extends PApplet{
 	}
 	
 	public void setup() {
-		cal = new ChuckALuckSpel();
+		cal = new ChuckALuckSpel(0);
+		cal.speelRonde(3, 5);
+		println(cal);
 	}
 	
 	public void draw() {
