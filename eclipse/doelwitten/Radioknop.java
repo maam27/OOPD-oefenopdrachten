@@ -9,8 +9,7 @@ public class Radioknop extends Switch implements IDoelwit{
 
 	@Override
 	public void schakel() {
-		// TODO Auto-generated method stub
-		
+		doeKnopActie();		
 	}
 	
 	@Override
@@ -42,12 +41,6 @@ public class Radioknop extends Switch implements IDoelwit{
 
 	public void doeKnopActie() {		
 		this.isAan=true;;
-	}
-	
-	@Override
-	public void teken() {
-		// TODO Auto-generated method stub
-		
 	}	
 
 }
