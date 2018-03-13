@@ -1,3 +1,3 @@
 public interface IReageerder {
-	public void doeActie();
+	public void doeActie(WeergaveObject w);
 }

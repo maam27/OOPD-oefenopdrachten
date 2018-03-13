@@ -10,7 +10,7 @@ public abstract class WeergaveObject {
 	
 	protected ArrayList<IReageerder> reageerdersLijst = new ArrayList<>();
 	
-	public WeergaveObject(int x, int y, int w, int h) {
+	public WeergaveObject(float x, float y, float w, float h) {
 		this.x=x;
 		this.y=y;
 		this.breedte=w;
@@ -24,12 +24,12 @@ public abstract class WeergaveObject {
 		vy+=ay;
 	}
 	
-	public abstract void geefWeer(PApplet app, int startX, int startY);
+	public abstract void geefWeer(PApplet app, float x, float y);
 	
 	public void geefMousePressedGebeurtenis(int mouseX, int mouseY) {
 		if(this.isMuisBinnen(mouseX, mouseY)) {
 			for(IReageerder f: reageerdersLijst) {
-				f.doeActie();
+				f.doeActie(this);
 			}
 		}
 	}
