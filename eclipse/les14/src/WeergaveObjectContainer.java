@@ -18,11 +18,10 @@ public class WeergaveObjectContainer extends WeergaveObject{
 	}
 
 	@Override
-	protected boolean isMuisBinnen(int muisX, int muisY) {
+	protected boolean isMuisBinnen(float muisX, float muisY) {
 		for(WeergaveObject w: this.weergaveLijst) {
-			if(w.isMuisBinnen(muisX, muisY)) {
-				System.out.println(w.isMuisBinnen(muisX, muisY));
-				return w.isMuisBinnen(muisX, muisY);
+			if(w.isMuisBinnen(muisX-this.x, muisY-this.y)) {		
+				return true;
 			}
 		}		
 		return false;

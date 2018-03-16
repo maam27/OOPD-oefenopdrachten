@@ -18,7 +18,7 @@ public class Rechthoek extends Figuur{
 	}
 
 	@Override
-	protected boolean isMuisBinnen(int muisX, int muisY) {
+	protected boolean isMuisBinnen(float muisX, float muisY) {
 		if (muisX >= x && muisX < x + breedte &&
 				muisY >= y && muisY < y + hoogte) {
 			return true;

@@ -34,7 +34,7 @@ public abstract class WeergaveObject {
 		}
 	}
 	
-	protected abstract boolean isMuisBinnen(int muisX, int muisY);
+	protected abstract boolean isMuisBinnen(float muisX, float muisY);
 	
 	protected void behandelMousePressedGebeurtenis() {
 		
