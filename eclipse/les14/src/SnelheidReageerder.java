@@ -5,5 +5,4 @@ public class SnelheidReageerder implements IReageerder {
 		w.ax++;
 		w.ay++;
 	}
-
 }

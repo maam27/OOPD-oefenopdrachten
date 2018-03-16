@@ -16,8 +16,8 @@ public class GraphicsEngineApp extends PApplet{
 	
 	public void setup() {
 		noLoop();
-		weergaveLijst.add(new Rechthoek(0,0,20,50));
-		weergaveLijst.add(new Rechthoek(0,060,20,50,90));
+		//weergaveLijst.add(new Rechthoek(0,0,20,50));
+		//weergaveLijst.add(new Rechthoek(0,060,20,50,90));
 		
 		Rechthoek r = new Rechthoek(50,90,200,50,160);
 		r.voegReageerderToe(new SnelheidReageerder());
@@ -25,13 +25,16 @@ public class GraphicsEngineApp extends PApplet{
 		r.setAx(1);	
 		r.setAy(-1);	
 		WeergaveObjectContainer cont = new WeergaveObjectContainer(250,250);
-		this.weergaveLijst.add(r);
+		//this.weergaveLijst.add(r);
 		
 		cont.voegToe(new Rechthoek(0,0,50,25,0xFFFFFFFF));
-		cont.voegToe(new Rechthoek(0,0,25,50,0xFF0ff000));
+		Rechthoek obj = new Rechthoek(0,0,25,50,0xFF0ff000);
+		obj.voegReageerderToe(new SnelheidReageerder());
+		cont.voegToe(obj);
 		cont.voegReageerderToe(new SnelheidReageerder());
-		cont.setAx(5);
-		cont.setAx(-1);
+		cont.voegReageerderToe(new HalloReageerder());
+		cont.setAx(0);
+		cont.setAx(0);
 		this.weergaveLijst.add(cont);
 	}
 	
